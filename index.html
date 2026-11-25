@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demo · Nippon Club</title>
+<link rel="icon" type="image/png" href="static/img/icona-192.png">
+<style>
+  :root { --accent: #b3202a; --testo: #1b1b1f; --sfondo: #f6f5f3; --card: #fff; --linea: #e3e0db; --muted: #666a73; }
+  @media (prefers-color-scheme: dark) { :root { --testo: #f1f0ee; --sfondo: #151517; --card: #202024; --linea: #34343a; --muted: #a8abb3; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--sfondo); color: var(--testo); line-height: 1.5; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.2rem 1rem 3rem; }
+  .marchio { display: flex; align-items: center; gap: .6rem; font-weight: 700; margin: .4rem 0 1rem; }
+  .marchio .logo { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--accent); color: #fff; font-size: 1.4rem; }
+  h1 { font-size: 1.6rem; margin: .2rem 0 .4rem; }
+  h2 { font-size: 1.1rem; margin: 1.8rem 0 .6rem; }
+  p { margin: .5rem 0; }
+  .muted { color: var(--muted); }
+  .avviso { background: #fff4c2; color: #5b4300; border-radius: 12px; padding: .7rem .9rem; margin: 1rem 0; font-size: .95rem; }
+  @media (prefers-color-scheme: dark) { .avviso { background: #3a3000; color: #ffe58a; } }
+  .ruoli { display: grid; gap: .7rem; margin: 1rem 0; }
+  a.ruolo, a.doc { display: flex; flex-direction: column; gap: .15rem; padding: .85rem 1rem; border: 1px solid var(--linea); border-radius: 14px; background: var(--card); color: inherit; text-decoration: none; }
+  a.ruolo:hover, a.doc:hover { border-color: var(--accent); }
+  a.ruolo strong, a.doc strong { font-size: 1.05rem; }
+  a.ruolo span, a.doc span { color: var(--muted); font-size: .88rem; }
+  .btn { display: inline-block; margin-top: .8rem; padding: .55rem 1.1rem; border-radius: 999px; background: var(--accent); color: #fff; text-decoration: none; border: 0; font: inherit; cursor: pointer; }
+  footer { margin-top: 2.2rem; font-size: .85rem; color: var(--muted); }
+</style>
+</head>
+<body><main>
+<div class="marchio"><span class="logo" aria-hidden="true">空</span><span>ASD Nippon Club</span></div>
+<h1>Gestionale Nippon Club</h1>
+<p class="muted">Iscrizioni, quote e pagamenti, documenti, shop, gare, comunicazioni, rinnovi e statistiche: il programma del club, in una versione da guardare.</p>
+<div class="avviso"><strong>Demo statica.</strong> Sono le schermate vere del programma, fotografate con <strong>dati completamente inventati</strong>. Si può navigare con i link, ma è in <strong>sola lettura</strong>:
+ i pulsanti non salvano nulla, i filtri e le ricerche non sono attivi e non si caricano file. Nella versione completa funziona tutto.</div>
+<h2>Scegli chi vuoi essere</h2>
+<div class="ruoli"><a class="ruolo" href="segreteria/index.html"><strong>Segreteria</strong><span>Iscrizioni, quote e pagamenti, rinnovi, statistiche, zainetto fiscale, esportazioni.</span></a><a class="ruolo" href="admin/index.html"><strong>Amministratore</strong><span>Come la segreteria, in più l'importazione degli atleti da file e la configurazione completa.</span></a><a class="ruolo" href="tecnico/index.html"><strong>Tecnico</strong><span>Solo i propri corsi: elenco atleti, convocazioni alle gare, messaggi.</span></a><a class="ruolo" href="famiglia/index.html"><strong>Famiglia</strong><span>L'area dei genitori da telefono: iscrizione e rinnovo, quote, gare, shop, messaggi.</span></a></div>
+<p class="muted">Consiglio: la <strong>Famiglia</strong> si guarda meglio dal telefono; <strong>Segreteria</strong> e <strong>Amministratore</strong> dal computer.</p>
+<h2 id="manuali">Manuali in PDF</h2><div class="ruoli"><a class="doc" href="manuali/Panoramica-Funzionalita-Nippon-Club.pdf"><strong>Panoramica delle funzionalità</strong><span>Tutto quello che il programma fa, con le schermate (20 pagine).</span></a><a class="doc" href="manuali/Manuale-Segreteria-Amministrazione-Nippon-Club.pdf"><strong>Manuale della segreteria e dell'amministrazione</strong><span>Passo passo, funzione per funzione (39 pagine).</span></a><a class="doc" href="manuali/Guida-Tecnici-Nippon-Club.pdf"><strong>Guida per i tecnici</strong><span>I corsi, le cinture, le gare, i messaggi (11 pagine).</span></a><a class="doc" href="manuali/Guida-Famiglie-Nippon-Club.pdf"><strong>Guida per le famiglie</strong><span>Iscrizione, quote, documenti, shop, gare (23 pagine).</span></a></div>
+<footer>Nessun dato di persone vere: nomi, email, importi e date sono inventati. Questo sito non viene indicizzato dai motori di ricerca.</footer>
+</main></body></html>
