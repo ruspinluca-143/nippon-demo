@@ -1,0 +1,9 @@
+﻿Articolo;Taglia;Colore;Quantità totale;N. ordini;Destinatari (atleta x pezzi)
+Paradenti;Junior;;1;1;Matteo Neri x1
+Tuta sociale;14;;1;1;Matteo Neri x1
+TOTALE PEZZI;;;2;1;
+
+Dettaglio per atleta
+Articolo;Taglia;Colore;Atleta;Quantità;Ordine n.;Famiglia;Stato ordine;Pagamento;Note della famiglia
+Paradenti;Junior;;Matteo Neri;1;2;Paolo Neri;Confermato;Pagato;Ordine d'esempio (dati di prova)
+Tuta sociale;14;;Matteo Neri;1;2;Paolo Neri;Confermato;Pagato;Ordine d'esempio (dati di prova)
