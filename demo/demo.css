@@ -1,0 +1,5 @@
+/* Demo statica: solo cio' che serve in piu' rispetto al programma */
+.demo-statica .demo-btn { border: 1px solid currentColor; background: transparent; color: inherit; border-radius: 999px; padding: .1rem .7rem; font: inherit; text-decoration: none; white-space: nowrap; }
+.demo-statica .demo-btn:hover { background: rgba(0,0,0,.06); }
+.demo-statica strong { white-space: nowrap; }
+@media (max-width: 560px) { .demo-statica .demo-btn { padding: .05rem .5rem; } .demo-statica .demo-manuali { display: none; } }
