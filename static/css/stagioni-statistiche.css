@@ -1,0 +1,33 @@
+/* Pagina Statistiche: solo barre CSS con larghezze calcolate dal server (niente JavaScript). Completa stagioni.css. */
+.st-selettore { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; padding: .7rem 1rem; }
+.st-selettore select { min-height: 44px; max-width: 100%; }
+.st-indice { display: flex; flex-wrap: wrap; gap: .4rem; margin: .2rem 0 .8rem; }
+.st-indice a { font-size: .85rem; padding: .25rem .65rem; border-radius: 999px; background: var(--soft); color: var(--text); border: 1px solid var(--line); }
+.st-indice a:hover { text-decoration: none; border-color: var(--accent); }
+.st-sezione { scroll-margin-top: 70px; }
+.st-tab td, .st-tab th { vertical-align: middle; }
+.st-tab .st-peso { min-width: 90px; width: 110px; }
+.st-tab .barra { height: 8px; }
+.st-tab tr.st-sel td { background: var(--info-bg); }
+.st-tab tr.st-zero td { color: var(--muted); }
+.st-mini { display: block; margin-top: .25rem; font-size: .8rem; color: var(--muted); }
+.st-delta { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.st-delta.su { color: var(--ok); }
+.st-delta.giu { color: var(--bad); }
+.st-delta.inv.su { color: var(--bad); }
+.st-delta.inv.giu { color: var(--ok); }
+.st-composizione { display: flex; height: 18px; border-radius: 999px; overflow: hidden; background: var(--grey-bg); margin: .4rem 0 .6rem; }
+.st-composizione > span { display: block; height: 100%; }
+.st-composizione .quota { background: var(--accent); }
+.st-composizione .costi { background: var(--info); }
+.st-composizione .sconti { background: var(--warn); }
+.st-legenda { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: .9rem; }
+.st-legenda i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: .35rem; }
+.st-legenda .quota i { background: var(--accent); }
+.st-legenda .costi i { background: var(--info); }
+.st-legenda .sconti i { background: var(--warn); }
+.st-due { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .st-due { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.st-due > .card { margin-bottom: 0; min-width: 0; }
+/* le righe con barra possono restringersi (etichette lunghe con i puntini) invece di allargare la pagina su telefono */
+.barra-riga > * { min-width: 0; }

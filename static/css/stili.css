@@ -1,0 +1,262 @@
+/* Stili grafici di Nippon Club. Ogni stile e' scelto dall'utente (attributo data-stile su <html>) e cambia colori,
+   forme, caratteri e personalita' dei componenti, senza toccare le pagine: stessa struttura, aspetto diverso.
+   Stili: stories (social), sport (app sportiva, scuro), dojo (carta e inchiostro), pulito (gestionale sobrio). */
+
+/* ============================== 0. BASE COMUNE ============================== */
+:root { --raggio-btn: 12px; --raggio-card: 12px; --font-titoli: inherit; --neon: var(--accent); }
+.solo-desktop { display: none; }
+@media (min-width: 900px) { .solo-desktop { display: grid; } .fab { display: none !important; } }
+.salta { position: absolute; left: -999px; top: 8px; z-index: 100; background: var(--accent); color: #fff; padding: .6rem 1rem; border-radius: 10px; }
+.salta:focus { left: 8px; }
+.ico { flex: none; vertical-align: middle; }
+h1, h2, h3 { font-family: var(--font-titoli); }
+.btn { border-radius: var(--raggio-btn); }
+.card { border-radius: var(--raggio-card); }
+.top { min-height: 58px; padding-top: env(safe-area-inset-top); }
+.brand .logo { font-size: 1.1rem; }
+.brand-nome { font-weight: 800; letter-spacing: -.01em; }
+.menu-utente summary { padding: 0; }
+.menu-utente summary span { font-weight: 800; font-size: .9rem; }
+.menu-utente .pannello a, .menu-utente .pannello button { display: flex; align-items: center; gap: .6rem; }
+.menu-utente .pannello svg { color: var(--muted); }
+
+/* barra in basso (telefono) */
+.bottom { align-items: flex-end; justify-content: space-around; padding: .1rem .4rem calc(.1rem + env(safe-area-inset-bottom)); }
+.bottom a, .bottom details.altro summary { position: relative; gap: 3px; padding: .45rem .2rem .4rem; min-width: 56px; }
+.bottom a svg, .bottom details.altro summary svg { transition: transform 320ms var(--ease-molla); }
+.bottom a.attivo svg { transform: translateY(-1px) scale(1.12); }
+.bottom a.attivo::before { content: ""; position: absolute; top: 0; left: 32%; right: 32%; height: 3px; border-radius: 0 0 3px 3px; background: var(--accent); animation: sfuma 300ms var(--ease) both; }
+.fab { flex: none; width: 58px; height: 58px; margin-top: -28px; border: 0; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; cursor: pointer; box-shadow: 0 0 0 5px var(--bg), 0 10px 24px color-mix(in srgb, var(--accent) 45%, transparent); z-index: 2; }
+.fab svg { transition: transform 360ms var(--ease-molla); }
+.fab:active svg { transform: rotate(90deg) scale(.9); }
+.bottom details.altro summary { color: var(--muted); }
+.pannello-altro a { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: .7rem; padding: .75rem .9rem; font-size: .95rem; color: var(--text); border-radius: 10px; min-width: 0; }
+.pannello-altro a::before { display: none; }
+.pannello-altro { animation: sale 260ms var(--ease) both; }
+
+/* menu laterale (schermo largo) */
+@media (min-width: 900px) {
+  .side a { gap: .75rem; font-weight: 500; }
+  .side a .s { display: grid; place-items: center; width: 1.5rem; color: var(--muted); }
+  .side a.attivo .s { color: inherit; }
+  .side a { transition: background-color 200ms, transform 200ms var(--ease); }
+  .side a:hover { transform: translateX(3px); }
+}
+
+/* saluto, pillole e cerchi dei figli (la struttura c'e' in ogni stile; l'aspetto lo dice lo stile) */
+.hero { margin: .2rem 0 1.1rem; position: relative; }
+.hero-saluto { margin: 0; color: var(--muted); font-weight: 600; font-size: .95rem; }
+.hero h1 { margin: 0 0 .6rem; }
+.pillole { display: flex; flex-wrap: wrap; gap: .5rem; }
+.pillola { display: inline-flex; align-items: center; gap: .4rem; padding: .42rem .85rem; border-radius: 999px; background: var(--soft); color: var(--text); font-weight: 600; font-size: .86rem; text-decoration: none; }
+.pillola:hover { text-decoration: none; filter: brightness(.97); }
+.pillola b { font-weight: 800; }
+.pillola.avviso { background: var(--bad-bg); color: var(--bad); }
+.pillola.attenzione { background: var(--warn-bg); color: var(--warn); }
+.pillola.ok { background: var(--ok-bg); color: var(--ok); }
+.storie { display: flex; gap: 14px; overflow-x: auto; padding: .3rem 1rem 1rem; margin: 0 -1rem .4rem; scroll-snap-type: x proximity; scrollbar-width: none; }
+.storie::-webkit-scrollbar { display: none; }
+.storia { flex: none; width: 76px; display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text); text-decoration: none; scroll-snap-align: start; }
+.storia:hover { text-decoration: none; }
+.anello-storia { width: 70px; height: 70px; border-radius: 50%; padding: 3px; background: var(--cintura, var(--accent)); display: grid; place-items: center; }
+.avatar-s { width: 100%; height: 100%; border-radius: 50%; background: var(--card); border: 3px solid var(--card); display: grid; place-items: center; font-weight: 800; font-size: 1.1rem; overflow: hidden; color: var(--text); }
+.avatar-s img { width: 100%; height: 100%; object-fit: cover; }
+.storia-nome { font-size: .78rem; font-weight: 600; max-width: 76px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.storia-azione .anello-storia { background: var(--line); }
+.storia-azione .avatar-s { color: var(--accent); }
+.scorri { display: flex; gap: .8rem; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -1rem; padding: .2rem 1rem 1rem; scrollbar-width: none; }
+.scorri::-webkit-scrollbar { display: none; }
+.scorri > * { flex: 0 0 min(88%, 420px); scroll-snap-align: center; margin: 0; }
+.cintura-etichetta { display: inline-flex; align-items: center; gap: .4rem; font-size: .8rem; font-weight: 600; color: var(--muted); }
+.cintura-etichetta i { width: 22px; height: 7px; border-radius: 2px; background: var(--cintura, var(--line)); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15); }
+.riga-anello { display: flex; align-items: center; gap: 1rem; }
+
+/* colori delle cinture (usati da anelli, nastri e righe) */
+[data-cintura="Bianca"] { --cintura: #e9e9e4; }
+[data-cintura="Gialla"] { --cintura: #f5c518; }
+[data-cintura="Arancione"] { --cintura: #f28c28; }
+[data-cintura="Verde"] { --cintura: #2e9e4f; }
+[data-cintura="Blu"] { --cintura: #2f6fe0; }
+[data-cintura="Marrone"] { --cintura: #7b4a2a; }
+[data-cintura="Nera"] { --cintura: #1c1c1c; }
+
+/* tavolozza di stato per gli stili scuri */
+html[data-stile="sport"], html[data-stile="sport"][data-tema="scuro"], html[data-stile="sport"][data-tema="auto"] { --ok: #5fd39b; --ok-bg: #153325; --warn: #f0be5a; --warn-bg: #3a2c0d; --bad: #ff8a92; --bad-bg: #3d1a1d; --info: #7fb2f5; --info-bg: #14283f; --grey-bg: #2a2a30; }
+
+/* ============================== 1. STORIES (social) ============================== */
+html[data-stile="stories"] { --bg: #fafafa; --card: #fff; --line: #ececec; --soft: #f3f3f5; --text: #121212; --muted: #737378; --radius: 22px; --raggio-btn: 14px; --raggio-card: 22px; --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 8px 24px rgba(20, 20, 40, .06); --grad: linear-gradient(45deg, #fcb045 0%, #f77737 24%, var(--accent) 52%, #c13584 78%, #833ab4 100%); }
+html[data-stile="stories"][data-tema="scuro"] { --bg: #000; --card: #121214; --line: #262629; --soft: #1c1c1f; --text: #f5f5f5; --muted: #a0a0a8; --shadow: none; }
+@media (prefers-color-scheme: dark) { html[data-stile="stories"][data-tema="auto"] { --bg: #000; --card: #121214; --line: #262629; --soft: #1c1c1f; --text: #f5f5f5; --muted: #a0a0a8; --shadow: none; } }
+html[data-stile="stories"] .top { background: color-mix(in srgb, var(--card) 80%, transparent); backdrop-filter: saturate(1.6) blur(16px); -webkit-backdrop-filter: saturate(1.6) blur(16px); border-bottom: 1px solid var(--line); }
+html[data-stile="stories"] .brand .logo { background: var(--grad); }
+html[data-stile="stories"] .brand-nome { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; font-size: 1.22rem; letter-spacing: -.03em; }
+html[data-stile="stories"] h1 { font-size: 1.75rem; font-weight: 900; letter-spacing: -.03em; }
+html[data-stile="stories"] h2 { font-weight: 800; letter-spacing: -.02em; }
+html[data-stile="stories"] .hero h1 { font-size: 2rem; }
+html[data-stile="stories"] .card { border: 0; box-shadow: var(--shadow); }
+html[data-stile="stories"] .card.link:hover { box-shadow: 0 12px 30px rgba(20, 20, 40, .12); border: 0; }
+html[data-stile="stories"] .scheda-figlio { border-left: 0; padding: 1.1rem; }
+html[data-stile="stories"] .scheda-figlio .avatar { width: 58px; height: 58px; background: var(--soft); color: var(--text); font-weight: 800; border: 3px solid var(--cintura, var(--accent)); }
+html[data-stile="stories"] .scheda-figlio img.avatar { padding: 0; }
+html[data-stile="stories"] .anello-storia { background: var(--grad); }
+html[data-stile="stories"] .storia.ha-avviso .anello-storia { animation: pulsa 2.2s ease-in-out infinite; }
+html[data-stile="stories"] .btn { border-color: transparent; font-weight: 700; }
+html[data-stile="stories"] .btn:not(.sec):not(.neutro):not(.rosso) { background: var(--grad); background-size: 140% 140%; }
+html[data-stile="stories"] .btn:not(.sec):not(.neutro):not(.rosso):hover { background-position: 100% 0; filter: none; }
+html[data-stile="stories"] .btn.sec { background: color-mix(in srgb, var(--accent) 10%, var(--card)); border-color: transparent; color: var(--accent); }
+html[data-stile="stories"] .btn.neutro { background: var(--soft); border-color: transparent; }
+html[data-stile="stories"] .badge { padding: .2rem .65rem; }
+html[data-stile="stories"] .tabs a { border: 0; background: var(--soft); font-weight: 600; }
+html[data-stile="stories"] .tabs a.attivo { background: var(--text); color: var(--bg); }
+html[data-stile="stories"] input[type=text], html[data-stile="stories"] input[type=email], html[data-stile="stories"] input[type=password], html[data-stile="stories"] input[type=number], html[data-stile="stories"] input[type=date], html[data-stile="stories"] input[type=time], html[data-stile="stories"] input[type=tel], html[data-stile="stories"] input[type=url], html[data-stile="stories"] input[type=search], html[data-stile="stories"] select, html[data-stile="stories"] textarea { border: 0; background: var(--soft); border-radius: 14px; }
+html[data-stile="stories"] .tab-wrap { border: 0; box-shadow: var(--shadow); }
+html[data-stile="stories"] .bottom { background: color-mix(in srgb, var(--card) 95%, transparent); backdrop-filter: saturate(1.6) blur(16px); -webkit-backdrop-filter: saturate(1.6) blur(16px); border-top: 1px solid var(--line); }
+html[data-stile="stories"] .bottom a { color: var(--text); }
+html[data-stile="stories"] .bottom a:not(.attivo) span, html[data-stile="stories"] .bottom details.altro summary span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+html[data-stile="stories"] .bottom a.attivo { color: var(--text); }
+html[data-stile="stories"] .bottom a.attivo::before { background: var(--grad); }
+html[data-stile="stories"] .bottom a.attivo span { font-weight: 700; animation: sale 260ms var(--ease) both; }
+html[data-stile="stories"] .fab { background: var(--grad); }
+html[data-stile="stories"] .side a.attivo { background: var(--grad); }
+html[data-stile="stories"] .kpi .n { font-weight: 900; letter-spacing: -.03em; }
+html[data-stile="stories"] .pillola { background: var(--card); box-shadow: var(--shadow); }
+html[data-stile="stories"] .pillola.avviso { background: var(--bad-bg); box-shadow: none; }
+html[data-stile="stories"] .pillola.attenzione { background: var(--warn-bg); box-shadow: none; }
+
+/* ============================== 2. SPORT (app sportiva, scuro) ============================== */
+html[data-stile="sport"], html[data-stile="sport"][data-tema="scuro"], html[data-stile="sport"][data-tema="auto"] { --bg: #09090b; --card: #141418; --line: #26262c; --soft: #1d1d23; --text: #f6f6f8; --muted: #9d9da8; --radius: 14px; --raggio-btn: 6px 16px 6px 16px; --raggio-card: 14px; --shadow: none; --font-titoli: "Bahnschrift", "Arial Narrow", "Segoe UI", system-ui, sans-serif; --neon: #c8ff2e; color-scheme: dark; }
+html[data-stile="sport"][data-tema="chiaro"] { --bg: #f1f1f4; --card: #fff; --line: #dcdce3; --soft: #ebebef; --text: #0b0b0e; --muted: #5d5d69; --neon: #1f8f00; color-scheme: light; --ok: #17724a; --ok-bg: #e4f4ec; --warn: #8a5a00; --warn-bg: #fdf1d8; --bad: #a3202a; --bad-bg: #fbe6e7; --info: #1b5aa6; --info-bg: #e5eefa; --grey-bg: #ecece8; }
+html[data-stile="sport"] h1, html[data-stile="sport"] h2, html[data-stile="sport"] h3 { text-transform: uppercase; letter-spacing: .03em; font-weight: 800; font-style: italic; }
+html[data-stile="sport"] h1 { font-size: 1.8rem; }
+html[data-stile="sport"] .top { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+html[data-stile="sport"] .brand-nome { text-transform: uppercase; font-style: italic; font-weight: 900; letter-spacing: .05em; }
+html[data-stile="sport"] .brand .logo { border-radius: 8px; transform: skewX(-8deg); }
+html[data-stile="sport"] .hero { background: linear-gradient(120deg, var(--accent), color-mix(in srgb, var(--accent) 40%, #000)); border-radius: 18px; padding: 1.15rem 1.1rem 1rem; overflow: hidden; color: #fff; margin-bottom: 1.2rem; }
+html[data-stile="sport"] .hero::after { content: ""; position: absolute; right: -30px; top: -30px; width: 190px; height: 190px; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, .15) 0 10px, transparent 10px 24px); transform: skewX(-12deg); pointer-events: none; }
+html[data-stile="sport"] .hero h1 { color: #fff; font-size: 2.3rem; line-height: 1; }
+html[data-stile="sport"] .hero-saluto { color: rgba(255, 255, 255, .8); text-transform: uppercase; letter-spacing: .1em; font-size: .75rem; font-weight: 700; }
+html[data-stile="sport"] .pillola { background: rgba(255, 255, 255, .17); color: #fff; backdrop-filter: blur(4px); position: relative; z-index: 1; }
+html[data-stile="sport"] .pillola.avviso { background: rgba(0, 0, 0, .35); color: #fff; }
+html[data-stile="sport"] .card { border: 1px solid var(--line); background: var(--card); }
+html[data-stile="sport"] .card.link:hover { border-color: var(--neon); }
+html[data-stile="sport"] .scheda-figlio { border-left: 6px solid var(--cintura, var(--accent)); }
+html[data-stile="sport"] .scheda-figlio .avatar { border-radius: 12px; background: var(--soft); }
+html[data-stile="sport"] .kpi .n { font-size: 2.7rem; font-weight: 900; font-style: italic; letter-spacing: -.02em; font-family: var(--font-titoli); }
+html[data-stile="sport"] .kpi .t { text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; font-weight: 700; }
+html[data-stile="sport"] .btn { text-transform: uppercase; letter-spacing: .06em; font-weight: 800; font-size: .82rem; font-style: italic; }
+html[data-stile="sport"] .btn:not(.sec):not(.neutro):not(.rosso) { background: var(--neon); border-color: var(--neon); color: #0b0b0e; }
+html[data-stile="sport"] .btn.sec { background: transparent; color: var(--neon); border-color: var(--neon); }
+html[data-stile="sport"] .btn.neutro { background: var(--soft); color: var(--text); border-color: var(--line); }
+html[data-stile="sport"] .badge { border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; font-size: .68rem; font-weight: 800; }
+html[data-stile="sport"] .badge.verde { color: var(--neon); }
+html[data-stile="sport"] .tab-wrap { border: 1px solid var(--line); }
+html[data-stile="sport"] table.tab th { background: var(--soft); text-transform: uppercase; letter-spacing: .06em; }
+html[data-stile="sport"] .tabs a { border-radius: 6px; text-transform: uppercase; font-size: .78rem; font-weight: 800; letter-spacing: .05em; }
+html[data-stile="sport"] .tabs a.attivo { background: var(--neon); border-color: var(--neon); color: #0b0b0e; }
+html[data-stile="sport"] .storie { gap: .6rem; padding-bottom: .8rem; }
+html[data-stile="sport"] .storia { width: auto; flex-direction: row; gap: .5rem; padding: .3rem .95rem .3rem .3rem; border-radius: 999px; background: var(--card); border: 1px solid var(--line); }
+html[data-stile="sport"] .anello-storia { width: 36px; height: 36px; padding: 2px; }
+html[data-stile="sport"] .avatar-s { font-size: .75rem; border-width: 2px; }
+html[data-stile="sport"] .storia-nome { font-weight: 800; text-transform: uppercase; font-size: .72rem; letter-spacing: .05em; max-width: none; }
+html[data-stile="sport"] .bottom { background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line); }
+html[data-stile="sport"] .bottom a.attivo { color: var(--neon); }
+html[data-stile="sport"] .bottom a.attivo::before { background: var(--neon); }
+html[data-stile="sport"] .bottom a { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .6rem; }
+html[data-stile="sport"] .fab { background: var(--neon); color: #0b0b0e; border-radius: 18px; transform: rotate(45deg); box-shadow: 0 0 0 5px var(--bg), 0 10px 26px color-mix(in srgb, var(--neon) 35%, transparent); }
+html[data-stile="sport"] .fab svg { transform: rotate(-45deg); }
+html[data-stile="sport"] .fab:active svg { transform: rotate(45deg) scale(.9); }
+html[data-stile="sport"] .side a.attivo { background: var(--neon); color: #0b0b0e; font-weight: 800; }
+html[data-stile="sport"] .anello { --anello-col: var(--neon); }
+html[data-stile="sport"] .barra > i { --anello-col: var(--neon); }
+html[data-stile="sport"] a.azione svg { color: var(--neon); }
+html[data-stile="sport"] input[type=text], html[data-stile="sport"] input[type=email], html[data-stile="sport"] input[type=password], html[data-stile="sport"] input[type=number], html[data-stile="sport"] input[type=date], html[data-stile="sport"] input[type=time], html[data-stile="sport"] input[type=tel], html[data-stile="sport"] input[type=url], html[data-stile="sport"] input[type=search], html[data-stile="sport"] select, html[data-stile="sport"] textarea { background: var(--soft); border-color: var(--line); color: var(--text); }
+html[data-stile="sport"] .menu-utente .pannello { background: var(--card); }
+
+/* ============================== 3. DOJO (carta e inchiostro) ============================== */
+html[data-stile="dojo"] { --bg: #f2ede2; --card: #fbf8f0; --line: #d9cfba; --soft: #ebe4d3; --text: #1d1a15; --muted: #6a6252; --radius: 3px; --raggio-btn: 2px; --raggio-card: 3px; --shadow: none; --font-titoli: "Iowan Old Style", "Palatino Linotype", Palatino, "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif; --dur: 560ms; }
+html[data-stile="dojo"][data-tema="scuro"] { --bg: #13110e; --card: #1b1814; --line: #3b3529; --soft: #25211b; --text: #f0e9d9; --muted: #a79d88; }
+@media (prefers-color-scheme: dark) { html[data-stile="dojo"][data-tema="auto"] { --bg: #13110e; --card: #1b1814; --line: #3b3529; --soft: #25211b; --text: #f0e9d9; --muted: #a79d88; } }
+html[data-stile="dojo"] h1 { font-size: 1.85rem; font-weight: 600; letter-spacing: -.01em; }
+html[data-stile="dojo"] h1::before { content: ""; display: inline-block; width: .42em; height: .42em; background: var(--accent); margin-right: .5em; transform: translateY(-.12em); }
+html[data-stile="dojo"] h2 { font-weight: 600; font-size: 1.2rem; border-bottom: 1px solid var(--line); padding-bottom: .35rem; position: relative; }
+html[data-stile="dojo"] h2::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 46px; height: 2px; background: var(--accent); }
+html[data-stile="dojo"] .card h2 { border-bottom: 0; }
+html[data-stile="dojo"] .card h2::after { display: none; }
+html[data-stile="dojo"] .top { background: var(--card); border-bottom: 1px solid var(--line); }
+html[data-stile="dojo"] .brand .logo { border-radius: 2px; }
+html[data-stile="dojo"] .brand-nome { font-family: var(--font-titoli); font-weight: 600; letter-spacing: .02em; }
+html[data-stile="dojo"] .card { border: 1px solid var(--line); box-shadow: none; }
+html[data-stile="dojo"] .card.link:hover { border-color: var(--accent); }
+html[data-stile="dojo"] .hero h1 { font-size: 2.1rem; }
+html[data-stile="dojo"] .hero::after { content: "道"; position: absolute; right: .2rem; top: -.5rem; font-size: 5.5rem; font-family: var(--font-titoli); opacity: .08; line-height: 1; pointer-events: none; }
+html[data-stile="dojo"] .hero-saluto { font-family: var(--font-titoli); font-style: italic; font-size: 1rem; }
+html[data-stile="dojo"] .pillola { border-radius: 2px; background: transparent; border: 1px solid var(--line); }
+html[data-stile="dojo"] .pillola.avviso { border-color: var(--accent); }
+html[data-stile="dojo"] .scheda-figlio { border-left: 0; border-top: 8px solid var(--cintura, var(--line)); padding-top: 1rem; }
+html[data-stile="dojo"] .scheda-figlio .avatar { border-radius: 3px; background: var(--soft); font-family: var(--font-titoli); }
+html[data-stile="dojo"] .anello-storia { border-radius: 12px; width: 64px; height: 64px; background: var(--cintura, var(--accent)); padding: 3px; }
+html[data-stile="dojo"] .avatar-s { border-radius: 9px; font-family: var(--font-titoli); font-size: 1.3rem; border-width: 2px; }
+html[data-stile="dojo"] .storia-nome { font-family: var(--font-titoli); font-size: .85rem; }
+html[data-stile="dojo"] .btn { font-weight: 600; letter-spacing: .03em; }
+html[data-stile="dojo"] .btn:hover { filter: none; box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .25); }
+html[data-stile="dojo"] .btn.sec { background: transparent; }
+html[data-stile="dojo"] .badge { border-radius: 2px; font-weight: 600; }
+html[data-stile="dojo"] .tabs a { border-radius: 2px; }
+html[data-stile="dojo"] .tab-wrap { border-radius: 3px; }
+html[data-stile="dojo"] table.tab th { background: var(--soft); font-family: var(--font-titoli); text-transform: none; letter-spacing: .02em; font-size: .85rem; }
+html[data-stile="dojo"] .bottom { background: var(--card); border-top: 1px solid var(--line); }
+html[data-stile="dojo"] .bottom a { font-family: var(--font-titoli); font-size: .7rem; }
+html[data-stile="dojo"] .fab { border-radius: 6px; box-shadow: 0 0 0 5px var(--bg), 0 8px 18px rgba(0, 0, 0, .22); }
+html[data-stile="dojo"] .side a { border-radius: 2px; }
+html[data-stile="dojo"] .side a.attivo { border-left: 3px solid var(--accent); background: var(--soft); color: var(--text); font-weight: 600; }
+html[data-stile="dojo"] .side a.attivo .s { color: var(--accent); }
+html[data-stile="dojo"] input[type=text], html[data-stile="dojo"] input[type=email], html[data-stile="dojo"] input[type=password], html[data-stile="dojo"] input[type=number], html[data-stile="dojo"] input[type=date], html[data-stile="dojo"] input[type=time], html[data-stile="dojo"] input[type=tel], html[data-stile="dojo"] input[type=url], html[data-stile="dojo"] input[type=search], html[data-stile="dojo"] select, html[data-stile="dojo"] textarea { border-radius: 2px; background: var(--card); }
+html[data-stile="dojo"] .toast { border-radius: 3px; background: #1d1a15; }
+html[data-stile="dojo"] .foglio-corpo { border-radius: 8px 8px 0 0; }
+html[data-stile="dojo"] a.azione { border-radius: 3px; border: 1px solid var(--line); background: var(--card); }
+
+/* ============================== 4. PULITO (gestionale sobrio) ============================== */
+html[data-stile="pulito"] .storie { display: none; }
+html[data-stile="pulito"] .hero-saluto { display: none; }
+html[data-stile="pulito"] .hero h1 { font-size: 1.5rem; }
+html[data-stile="pulito"] .entra { animation-duration: 220ms; }
+
+/* ============================== ANTEPRIME DEGLI STILI (pagina Aspetto) ============================== */
+.tiles-stile { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-bottom: 1rem; }
+.tile-stile { position: relative; display: block; border: 2px solid var(--line); border-radius: 18px; padding: .8rem; background: var(--card); cursor: pointer; transition: border-color 200ms, transform 220ms var(--ease), box-shadow 220ms; }
+.tile-stile:hover { transform: translateY(-2px); }
+.tile-stile input { position: absolute; opacity: 0; pointer-events: none; }
+.tile-stile:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent); }
+.tile-stile:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.mock { height: 128px; border-radius: 12px; padding: 9px; display: flex; flex-direction: column; gap: 7px; overflow: hidden; margin-bottom: .65rem; }
+.mock .m-riga { display: flex; gap: 7px; }
+.mock .m-cerchio { width: 26px; height: 26px; border-radius: 50%; }
+.mock .m-scheda { flex: 1; border-radius: 9px; position: relative; overflow: hidden; }
+.mock .m-bottone { height: 15px; width: 55%; border-radius: 8px; }
+.mock .m-titolo { height: 14px; width: 62%; border-radius: 3px; }
+.mock .m-hero { height: 38px; border-radius: 10px; }
+.mock .m-pill { height: 13px; width: 38%; border-radius: 8px; }
+.mock .m-nastro { position: absolute; left: 0; right: 0; top: 0; height: 7px; }
+.mock-stories { background: #fafafa; }
+.mock-stories .m-cerchio { background: conic-gradient(#fcb045, #f77737, #c13584, #833ab4, #fcb045); }
+.mock-stories .m-scheda { background: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, .1); border-radius: 14px; }
+.mock-stories .m-bottone { background: linear-gradient(45deg, #fcb045, #c13584, #833ab4); }
+.mock-sport { background: #09090b; }
+.mock-sport .m-hero { background: linear-gradient(120deg, var(--accent), #3a0c10); }
+.mock-sport .m-pill { background: #c8ff2e; border-radius: 3px 8px 3px 8px; }
+.mock-sport .m-scheda { background: #1d1d23; border-left: 5px solid #f28c28; border-radius: 6px; }
+.mock-dojo { background: #f2ede2; }
+.mock-dojo .m-titolo { background: #1d1a15; opacity: .8; }
+.mock-dojo .m-scheda { background: #fbf8f0; border: 1px solid #d9cfba; border-radius: 2px; }
+.mock-dojo .m-nastro { background: #2e9e4f; }
+.mock-dojo .m-bottone { background: var(--accent); border-radius: 2px; }
+.mock-pulito { background: #f4f4f1; }
+.mock-pulito .m-titolo { background: #1c1c1f; opacity: .7; }
+.mock-pulito .m-scheda { background: #fff; border: 1px solid #e2e2dd; }
+@media (min-width: 900px) { .scorri { display: grid; grid-template-columns: repeat(2, 1fr); overflow: visible; margin: 0; padding: 0 0 1rem; } .scorri > * { flex: none; } }
+/* Sport: i link in tinta neon (il rosso su nero si legge male) */
+html[data-stile="sport"] a:not(.btn):not(.storia):not(.pillola):not(.azione):not(.brand):not(.card.link) { color: var(--neon); }
+html[data-stile="sport"] .scheda-figlio a strong { color: var(--text); }
+html[data-stile="sport"] .menu-utente .pannello a, html[data-stile="sport"] .side a, html[data-stile="sport"] .bottom a, html[data-stile="sport"] .pannello-altro a { color: var(--text); }
+html[data-stile="sport"] .side a.attivo, html[data-stile="sport"] .bottom a.attivo { color: #0b0b0e; }
+html[data-stile="sport"] .bottom a.attivo { color: var(--neon); }

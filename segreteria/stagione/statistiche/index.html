@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="it" data-tema="auto" data-stile="stories" style="--accent: #b3202a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b3202a">
+  <meta name="view-transition" content="same-origin">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Nippon Club">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/png" href="../../../static/img/icona-192.png">
+  <link rel="apple-touch-icon" href="../../../static/img/icona-apple-180.png">
+  <title>Statistiche · Nippon Club</title>
+  <link rel="stylesheet" href="../../../static/css/app.css">
+  <link rel="stylesheet" href="../../../static/css/stili.css">
+  <link rel="stylesheet" href="../../../static/css/movimento.css">
+  <script src="../../../static/js/app.js" defer></script>
+  <link rel="stylesheet" href="../../../static/css/stagioni.css"><link rel="stylesheet" href="../../../static/css/stagioni-statistiche.css">
+<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="../../../demo/demo.css"><script src="../../../demo/demo.js" defer></script></head>
+<body><div class="banner-demo demo-statica" role="note"><strong>DEMO STATICA</strong><span class="banner-demo-dettaglio">dati inventati · sola lettura: nulla si salva</span><span class="banner-demo-corto">sola lettura</span><a class="demo-btn" href="../../../index.html">Cambia ruolo</a><a class="demo-btn demo-manuali" href="../../../index.html#manuali">Manuali PDF</a></div>
+<a class="salta" href="#contenuto">Vai al contenuto</a>
+
+<header class="top">
+  <a class="brand" href="../../index.html"><span class="logo" aria-hidden="true">空</span><span class="brand-nome">Nippon Club</span></a>
+  <span class="spazio"></span>
+  
+    <button class="icona-btn solo-desktop" type="button" data-foglio-apri aria-label="Azioni rapide" aria-haspopup="dialog"><svg class="ico " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></button>
+    
+    
+      <a class="icona-btn" href="../../notifiche/index.html" aria-label="Notifiche"><svg class="ico " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.6 2H4.4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></a>
+    
+    <details class="menu-utente">
+      <summary aria-label="Menu utente"><span>SS</span></summary>
+      <div class="pannello">
+        <div class="chi"><strong>Sara Segreteria</strong><br><span class="muted small">Segreteria</span></div>
+        <a href="../../account/profilo/index.html"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c0-4 3.3-6.2 7.5-6.2s7.5 2.2 7.5 6.2"/></svg> Il mio profilo</a>
+        <a href="../../aspetto/index.html"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.2 0 1.8-.8 1.8-1.7 0-1.2-.9-1.6-.9-2.7 0-.9.7-1.6 1.7-1.6h2.2a3.7 3.7 0 0 0 3.7-3.7C20.5 6.7 16.7 3.5 12 3.5z"/><circle cx="7.8" cy="11" r="1"/><circle cx="10.5" cy="7.4" r="1"/><circle cx="15" cy="7.8" r="1"/></svg> Aspetto e stile</a>
+        <a href="../../preferenze-notifiche/index.html"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.6 2H4.4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg> Preferenze notifiche</a>
+        <a href="../../account/password/cambia/index.html"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5 5 6v5.5c0 4.3 2.8 7.6 7 9 4.2-1.4 7-4.7 7-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg> Cambia password</a>
+        <form method="get" data-demo-libero action="../../../index.html" data-turbo="false"><button type="submit"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 4.5H6.5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2H10"/><path d="M14.5 8 19 12l-4.5 4M19 12H9.5"/></svg> Esci</button></form>
+      </div>
+    </details>
+  
+</header>
+
+
+<div class="shell">
+  <nav class="side" aria-label="Menu principale">
+    <a href="../../index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/></svg></span><span class="et">Dashboard</span></a><a href="../../segreteria/iscrizioni/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="4.5" width="12" height="16.5" rx="2"/><path d="M9.5 4.5V3.5h5v1"/><path d="M9.5 11h5M9.5 15h3.5"/></svg></span><span class="et">Iscrizioni</span></a><a href="../../tesserati/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3.2 2.4-5.2 5.5-5.2s5.5 2 5.5 5.2"/><circle cx="17" cy="9" r="2.4"/><path d="M16.3 14c2.6 0 4.7 1.6 4.7 4.5"/></svg></span><span class="et">Tesserati</span></a><a href="../../quote/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 7.3A6.2 6.2 0 1 0 17.5 16.7"/><path d="M5 10.4h8.2M5 13.6h8.2"/></svg></span><span class="et">Quote e pagamenti</span></a><a href="../../documenti/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 12h5M9.5 15.5h5"/></svg></span><span class="et">Documenti</span></a><a href="../../segreteria/shop/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8.5h14l-1 11.5H6z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg></span><span class="et">Shop</span></a><a href="../../gare/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21V4"/><path d="M6 5h11.5l-2.3 4 2.3 4H6"/></svg></span><span class="et">Gare ed eventi</span></a><a href="../../messaggi/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9.5L4 20.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><span class="et">Comunicazioni</span></a><a href="../index.html" class="attivo"><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.5 12a7.5 7.5 0 1 1-2.4-5.5"/><path d="M19.5 4.5v4h-4"/><path d="M12 8v4.2l2.6 1.6"/></svg></span><span class="et">Stagione</span></a><a href="../../configurazione/index.html" class=""><span class="s"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></svg></span><span class="et">Configurazione</span></a>
+  </nav>
+  <main id="contenuto">
+    
+
+    
+<nav class="tabs" aria-label="Sezioni di fine stagione">
+  <a href="../index.html" >Panoramica</a><a href="../rinnovi/index.html" >Rinnovi</a><a href="index.html" class="attivo" aria-current="page">Statistiche</a><a href="../zainetto/index.html" >Zainetto fiscale</a>
+</nav>
+
+<div class="riga sp">
+  <h1>Statistiche</h1>
+  <a class="btn sec" href="../../file/statistiche-s2-2026-11-25-e20071.csv">Scarica CSV del periodo</a>
+</div>
+
+<form method="get" action="#" class="card st-selettore">
+  <label for="periodo"><strong>Periodo</strong></label>
+  <select id="periodo" name="periodo" data-auto-invio>
+    <optgroup label="Stagioni (competenza)"><option value="s3" >Stagione 2027/28</option><option value="s2" selected>Stagione 2026/27</option><option value="s1" >Stagione 2025/26</option></optgroup>
+    <optgroup label="Anni solari (cassa)"><option value="a2026" >Anno solare 2026</option><option value="a2025" >Anno solare 2025</option></optgroup>
+  </select>
+  <noscript><button class="btn sec piccolo" type="submit">Mostra</button></noscript>
+  <span class="muted small">01/09/2026 - 30/06/2027</span>
+</form>
+
+
+
+
+
+
+
+<p class="muted">Stagione <strong>2026/27</strong>, dal 01/09/2026 al 30/06/2027
+  <span class="badge verde">in corso o futura</span>.
+  Qui si guarda per <strong>competenza</strong>: le quote di questa stagione e tutti i pagamenti che le coprono, anche se fatti in un altro anno.
+  Per i soldi incassati in un anno di calendario scegli un anno solare.</p>
+
+<nav class="st-indice" aria-label="Sezioni della pagina">
+  <a href="#iscritti">Iscritti e rinnovi</a><a href="#guadagno">Dove si guadagna</a><a href="#eta">Fasce di eta'</a><a href="#pagamenti">Pagamenti</a>
+  <a href="#morosita">Morosita'</a><a href="#shop">Shop</a><a href="#gare">Gare ed eventi</a><a href="#andamento">Andamento</a>
+</nav>
+
+
+<h2 id="iscritti" class="st-sezione">1. Iscritti e rinnovi</h2>
+<div class="st-kpi">
+  <div><div class="n">39</div><div class="t">Iscritti</div>
+    <div class="d">rispetto a 2025/26: <span class="st-delta giu">-4 (-9,3%)</span>
+</div></div>
+  <div><div class="n">10</div><div class="t">Nuovi (mai iscritti prima)</div></div>
+  <div><div class="n">29</div><div class="t">Rinnovi</div></div>
+  <div><div class="n">0</div><div class="t">Ritorni (dopo una pausa)</div></div>
+  <div><div class="n">14</div><div class="t">Non ancora rinnovati</div></div>
+  <div><div class="n">67,4%</div><div class="t">Tasso di rinnovo</div>
+    </div>
+</div>
+
+
+<h3>Confronto con la stagione precedente (2025/26)</h3>
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Voce</th><th class="num">2026/27</th><th class="num">2025/26</th><th class="num">Differenza</th></tr></thead>
+  <tbody>
+  
+    <tr><td>Iscritti</td>
+      <td class="num">39</td>
+      <td class="num">43</td>
+      <td class="num"><span class="st-delta giu">-4 (-9,3%)</span>
+</td></tr>
+  
+    <tr><td>Nuovi</td>
+      <td class="num">10</td>
+      <td class="num">43</td>
+      <td class="num"><span class="st-delta giu">-33 (-76,7%)</span>
+</td></tr>
+  
+    <tr><td>Rinnovi</td>
+      <td class="num">29</td>
+      <td class="num">0</td>
+      <td class="num"><span class="st-delta su">+29</span>
+</td></tr>
+  
+    <tr><td>Dovuto</td>
+      <td class="num">12.222,00 €</td>
+      <td class="num">12.347,60 €</td>
+      <td class="num"><span class="st-delta giu">-125,60 € (-1,0%)</span>
+</td></tr>
+  
+    <tr><td>Incassato</td>
+      <td class="num">5.643,17 €</td>
+      <td class="num">10.485,43 €</td>
+      <td class="num"><span class="st-delta giu">-4.842,26 € (-46,2%)</span>
+</td></tr>
+  
+    <tr><td>Medio per atleta</td>
+      <td class="num">313,38 €</td>
+      <td class="num">301,16 €</td>
+      <td class="num"><span class="st-delta su">+12,22 € (+4,1%)</span>
+</td></tr>
+  
+  </tbody>
+</table></div>
+
+
+<div class="st-due" style="margin-top:1rem">
+  <div class="card"><h3>Iscritti per disciplina</h3>
+    <div class="barra-riga"><span class="et">Karate</span><div class="barra" role="img" aria-label="Karate: 34 iscritti"><span style="width: 100%"></span></div><span class="val">34 (87,2%)</span></div>
+    <div class="barra-riga"><span class="et">Lotta</span><div class="barra" role="img" aria-label="Lotta: 5 iscritti"><span style="width: 15%"></span></div><span class="val">5 (12,8%)</span></div>
+    </div>
+  <div class="card"><h3>Iscritti per sede</h3>
+    <div class="barra-riga"><span class="et">Pescantina</span><div class="barra" role="img" aria-label="Pescantina: 11 iscritti"><span style="width: 100%"></span></div><span class="val">11 (28,2%)</span></div>
+    <div class="barra-riga"><span class="et">Affi</span><div class="barra" role="img" aria-label="Affi: 9 iscritti"><span style="width: 82%"></span></div><span class="val">9 (23,1%)</span></div>
+    <div class="barra-riga"><span class="et">Negrar</span><div class="barra" role="img" aria-label="Negrar: 8 iscritti"><span style="width: 73%"></span></div><span class="val">8 (20,5%)</span></div>
+    <div class="barra-riga"><span class="et">Bussolengo</span><div class="barra" role="img" aria-label="Bussolengo: 6 iscritti"><span style="width: 55%"></span></div><span class="val">6 (15,4%)</span></div>
+    <div class="barra-riga"><span class="et">Caprino</span><div class="barra" role="img" aria-label="Caprino: 5 iscritti"><span style="width: 45%"></span></div><span class="val">5 (12,8%)</span></div>
+    </div>
+</div>
+<p class="muted small">Iscritto = atleta con almeno un'iscrizione <strong>approvata</strong> in un corso della stagione (bozze, richieste inviate e respinte non contano).
+  Un atleta in due discipline o due sedi compare in entrambe le barre, ma e' contato una volta sola nel totale.
+  <strong>Nuovo</strong> = mai iscritto in una stagione precedente; <strong>rinnovo</strong> = iscritto anche nella stagione precedente; <strong>ritorno</strong> = iscritto prima, ma non nella precedente;
+  <strong>Non ancora rinnovati</strong> = iscritti nella stagione precedente che qui non ci sono (la stagione non e' finita: molti rinnovano ancora).
+  Tasso di rinnovo = rinnovi / iscritti della stagione precedente (43).</p>
+
+<h3>Perche' non rinnovano</h3>
+
+<p class="muted">Nessuna dichiarazione «non rinnovo» registrata per questa stagione.</p>
+
+<p class="muted small">Dalle dichiarazioni «non rinnovo» fatte dalle famiglie o dalla segreteria nella campagna di rinnovo della stagione: si contano i motivi scelti (solo numeri, mai nomi). Non e' detto che tutti i «persi» abbiano dichiarato qualcosa.</p>
+
+
+<h2 id="guadagno" class="st-sezione">2. Dove si guadagna</h2>
+<div class="st-kpi">
+  <div><div class="n">12.222,00 €</div><div class="t">Dovuto (quote confermate)</div></div>
+  <div><div class="n">5.643,17 €</div><div class="t">Incassato</div><div class="d">46,2% del dovuto</div></div>
+  <div><div class="n">6.578,83 €</div><div class="t">Residuo da incassare</div></div>
+  <div><div class="n">313,38 €</div><div class="t">Medio per atleta</div><div class="d">39 atleti con quota confermata</div></div>
+</div>
+
+
+<h3>Per sede</h3>
+
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr>
+    <th>Sede</th>
+    <th class="num">Iscritti</th><th class="num">Con quota</th><th class="num">Dovuto</th><th class="num">Incassato</th><th class="num">Residuo</th><th class="num">Medio per atleta</th><th>Peso sul dovuto</th>
+  </tr></thead>
+  <tbody>
+  
+    <tr>
+      <td><strong>Pescantina</strong></td>
+      <td class="num">11</td><td class="num">11</td><td class="num">3.404,00 €</td><td class="num">1.389,67 €</td><td class="num">2.014,33 €</td>
+      <td class="num">309,45 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="27,9 per cento del dovuto"><span style="width: 100%"></span></div><span class="st-mini">27,9%</span></td>
+    </tr>
+  
+    <tr>
+      <td><strong>Affi</strong></td>
+      <td class="num">9</td><td class="num">9</td><td class="num">2.889,00 €</td><td class="num">1.879,67 €</td><td class="num">1.009,33 €</td>
+      <td class="num">321,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="23,6 per cento del dovuto"><span style="width: 85%"></span></div><span class="st-mini">23,6%</span></td>
+    </tr>
+  
+    <tr>
+      <td><strong>Negrar</strong></td>
+      <td class="num">8</td><td class="num">8</td><td class="num">2.513,00 €</td><td class="num">815,00 €</td><td class="num">1.698,00 €</td>
+      <td class="num">314,13 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="20,6 per cento del dovuto"><span style="width: 74%"></span></div><span class="st-mini">20,6%</span></td>
+    </tr>
+  
+    <tr>
+      <td><strong>Bussolengo</strong></td>
+      <td class="num">6</td><td class="num">6</td><td class="num">1.833,00 €</td><td class="num">435,00 €</td><td class="num">1.398,00 €</td>
+      <td class="num">305,50 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="15,0 per cento del dovuto"><span style="width: 54%"></span></div><span class="st-mini">15,0%</span></td>
+    </tr>
+  
+    <tr>
+      <td><strong>Caprino</strong></td>
+      <td class="num">5</td><td class="num">5</td><td class="num">1.583,00 €</td><td class="num">1.123,83 €</td><td class="num">459,17 €</td>
+      <td class="num">316,60 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="13,0 per cento del dovuto"><span style="width: 47%"></span></div><span class="st-mini">13,0%</span></td>
+    </tr>
+  
+  
+    <tr class="tot"><td>Totale</td><td class="num">39</td><td class="num">39</td><td class="num">12.222,00 €</td><td class="num">5.643,17 €</td><td class="num">6.578,83 €</td><td class="num">313,38 €</td><td></td></tr>
+  
+  </tbody>
+</table></div>
+
+<h3>Per disciplina</h3>
+
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr>
+    <th>Disciplina</th>
+    <th class="num">Iscritti</th><th class="num">Con quota</th><th class="num">Dovuto</th><th class="num">Incassato</th><th class="num">Residuo</th><th class="num">Medio per atleta</th><th>Peso sul dovuto</th>
+  </tr></thead>
+  <tbody>
+  
+    <tr>
+      <td><strong>Karate</strong></td>
+      <td class="num">34</td><td class="num">34</td><td class="num">10.378,00 €</td><td class="num">4.479,17 €</td><td class="num">5.898,83 €</td>
+      <td class="num">305,24 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="84,9 per cento del dovuto"><span style="width: 100%"></span></div><span class="st-mini">84,9%</span></td>
+    </tr>
+  
+    <tr>
+      <td><strong>Lotta</strong></td>
+      <td class="num">5</td><td class="num">5</td><td class="num">1.844,00 €</td><td class="num">1.164,00 €</td><td class="num">680,00 €</td>
+      <td class="num">368,80 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="15,1 per cento del dovuto"><span style="width: 18%"></span></div><span class="st-mini">15,1%</span></td>
+    </tr>
+  
+  
+    <tr class="tot"><td>Totale</td><td class="num">39</td><td class="num">39</td><td class="num">12.222,00 €</td><td class="num">5.643,17 €</td><td class="num">6.578,83 €</td><td class="num">313,38 €</td><td></td></tr>
+  
+  </tbody>
+</table></div>
+
+<h3>Per corso</h3>
+
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr>
+    <th>Corso</th><th>Sede</th>
+    <th class="num">Iscritti</th><th class="num">Con quota</th><th class="num">Dovuto</th><th class="num">Incassato</th><th class="num">Residuo</th><th class="num">Medio per atleta</th><th>Peso sul dovuto</th>
+  </tr></thead>
+  <tbody>
+  
+    <tr>
+      <td>Karate Ragazzi e adulti</td><td>Negrar</td>
+      <td class="num">7</td><td class="num">7</td><td class="num">2.173,00 €</td><td class="num">815,00 €</td><td class="num">1.358,00 €</td>
+      <td class="num">310,43 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="17,8 per cento del dovuto"><span style="width: 100%"></span></div><span class="st-mini">17,8%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate Ragazzi e adulti</td><td>Pescantina</td>
+      <td class="num">6</td><td class="num">6</td><td class="num">1.731,00 €</td><td class="num">396,67 €</td><td class="num">1.334,33 €</td>
+      <td class="num">288,50 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="14,2 per cento del dovuto"><span style="width: 80%"></span></div><span class="st-mini">14,2%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate Ragazzi e adulti</td><td>Bussolengo</td>
+      <td class="num">5</td><td class="num">5</td><td class="num">1.553,00 €</td><td class="num">155,00 €</td><td class="num">1.398,00 €</td>
+      <td class="num">310,60 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="12,7 per cento del dovuto"><span style="width: 71%"></span></div><span class="st-mini">12,7%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate U12</td><td>Affi</td>
+      <td class="num">4</td><td class="num">4</td><td class="num">1.192,00 €</td><td class="num">696,00 €</td><td class="num">496,00 €</td>
+      <td class="num">298,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="9,8 per cento del dovuto"><span style="width: 55%"></span></div><span class="st-mini">9,8%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Lotta Lotta</td><td>Pescantina</td>
+      <td class="num">3</td><td class="num">3</td><td class="num">1.080,00 €</td><td class="num">400,00 €</td><td class="num">680,00 €</td>
+      <td class="num">360,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="8,8 per cento del dovuto"><span style="width: 50%"></span></div><span class="st-mini">8,8%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate Ragazzi e adulti</td><td>Affi</td>
+      <td class="num">3</td><td class="num">3</td><td class="num">933,00 €</td><td class="num">419,67 €</td><td class="num">513,33 €</td>
+      <td class="num">311,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="7,6 per cento del dovuto"><span style="width: 43%"></span></div><span class="st-mini">7,6%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate Ragazzi e adulti</td><td>Caprino</td>
+      <td class="num">3</td><td class="num">3</td><td class="num">933,00 €</td><td class="num">933,00 €</td><td class="num">0,00 €</td>
+      <td class="num">311,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="7,6 per cento del dovuto"><span style="width: 43%"></span></div><span class="st-mini">7,6%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Lotta Lotta</td><td>Affi</td>
+      <td class="num">2</td><td class="num">2</td><td class="num">764,00 €</td><td class="num">764,00 €</td><td class="num">0,00 €</td>
+      <td class="num">382,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="6,3 per cento del dovuto"><span style="width: 35%"></span></div><span class="st-mini">6,3%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate U12</td><td>Caprino</td>
+      <td class="num">2</td><td class="num">2</td><td class="num">650,00 €</td><td class="num">190,83 €</td><td class="num">459,17 €</td>
+      <td class="num">325,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="5,3 per cento del dovuto"><span style="width: 30%"></span></div><span class="st-mini">5,3%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate U12</td><td>Pescantina</td>
+      <td class="num">2</td><td class="num">2</td><td class="num">593,00 €</td><td class="num">593,00 €</td><td class="num">0,00 €</td>
+      <td class="num">296,50 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="4,9 per cento del dovuto"><span style="width: 27%"></span></div><span class="st-mini">4,9%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate U12</td><td>Negrar</td>
+      <td class="num">1</td><td class="num">1</td><td class="num">340,00 €</td><td class="num">0,00 €</td><td class="num">340,00 €</td>
+      <td class="num">340,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="2,8 per cento del dovuto"><span style="width: 16%"></span></div><span class="st-mini">2,8%</span></td>
+    </tr>
+  
+    <tr>
+      <td>Karate U12</td><td>Bussolengo</td>
+      <td class="num">1</td><td class="num">1</td><td class="num">280,00 €</td><td class="num">280,00 €</td><td class="num">0,00 €</td>
+      <td class="num">280,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="2,3 per cento del dovuto"><span style="width: 13%"></span></div><span class="st-mini">2,3%</span></td>
+    </tr>
+  
+  
+    <tr class="tot"><td>Totale</td><td></td><td class="num">39</td><td class="num">39</td><td class="num">12.222,00 €</td><td class="num">5.643,17 €</td><td class="num">6.578,83 €</td><td class="num">313,38 €</td><td></td></tr>
+  
+  </tbody>
+</table></div>
+
+<p class="muted small">Dovuto = totale delle quote <strong>confermate</strong> (quota calcolata + eventuali correzioni manuali); le quote provvisorie non sono contate.
+  Incassato = pagamenti registrati che coprono quelle quote, in qualunque data (gli annullati non sono inclusi). Residuo = dovuto - incassato.
+  «Iscritti» sono gli iscritti approvati del gruppo, «Con quota» quelli con quota confermata; il medio e' dovuto / atleti con quota confermata.
+  I gruppi sono in ordine di dovuto; i corsi senza iscritti compaiono in fondo.</p>
+
+<h3>Da cosa e' fatto il dovuto</h3>
+<div class="card">
+  <div class="st-composizione" role="img" aria-label="Composizione del dovuto lordo: quota dei corsi, costi fissi, sconti">
+    <span class="quota" style="width: 100%"></span><span class="costi" style="width: 14%"></span><span class="sconti" style="width: 4%"></span>
+  </div>
+  <div class="st-legenda">
+    <span class="quota"><i></i>Quota dei corsi: <strong>11.130,00 €</strong></span>
+    <span class="costi"><i></i>Costi fissi: <strong>1.560,00 €</strong></span>
+    <span class="sconti"><i></i>Sconti concessi: <strong>468,00 €</strong> (3,7% del lordo)</span>
+  </div>
+  <dl class="dati" style="margin-top:.8rem">
+    <dt>Lordo (quota dei corsi + costi fissi)</dt><dd>12.690,00 €</dd>
+    <dt>Meno sconti</dt><dd>468,00 €</dd>
+    <dt>Correzioni manuali (in piu' o in meno)</dt><dd>0,00 €</dd>
+    <dt>Dovuto</dt><dd><strong>12.222,00 €</strong></dd>
+  </dl>
+</div>
+
+<h3>Sconti e agevolazioni</h3>
+<div class="st-kpi">
+  <div><div class="n">17</div><div class="t">Atleti con almeno uno sconto</div></div>
+  <div><div class="n">17</div><div class="t">Con sconto fratelli</div></div>
+  <div><div class="n">0</div><div class="t">Con agevolazioni assegnate</div></div>
+</div>
+
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Sconto</th><th>Tipo</th><th class="num">Quote</th><th class="num">Importo concesso</th></tr></thead>
+  <tbody><tr><td><strong>Sconto fratelli</strong></td><td>Sconto fratelli</td><td class="num">17</td><td class="num">468,00 €</td></tr></tbody>
+</table></div>
+
+<p class="muted small">La composizione e gli sconti si leggono dal dettaglio salvato quando la quota e' stata confermata: se il listino cambia dopo, questi numeri non cambiano.
+  La quota dei corsi include la riduzione per chi inizia a stagione in corso. Gli sconti sono quelli davvero applicati (dopo il tetto massimo); un atleta con sconto fratelli e agevolazione compare in entrambe le caselle.</p>
+
+
+<h2 id="eta" class="st-sezione">3. Fasce di eta'</h2>
+<div class="st-kpi">
+  <div><div class="n">39</div><div class="t">Atleti iscritti</div></div>
+  <div><div class="n">13,3</div><div class="t">Eta' media (anni)</div></div>
+  <div><div class="n">13 / 26</div><div class="t">Maschi / femmine</div></div>
+</div>
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Fascia (anni)</th><th class="num">Atleti</th><th class="num">%</th><th class="num">Maschi</th><th class="num">Femmine</th><th class="num">Dovuto</th><th class="num">Incassato</th><th>Peso</th></tr></thead>
+  <tbody>
+  
+    <tr class="st-zero"><td><strong>3-5</strong></td><td class="num">0</td>
+      <td class="num">0,0</td><td class="num">0</td><td class="num">0</td>
+      <td class="num">0,00 €</td><td class="num">0,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="3-5 anni: 0 atleti"><span style="width: 0%"></span></div></td></tr>
+  
+    <tr><td><strong>6-8</strong></td><td class="num">5</td>
+      <td class="num">12,8</td><td class="num">4</td><td class="num">1</td>
+      <td class="num">1.583,00 €</td><td class="num">1.350,50 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="6-8 anni: 5 atleti"><span style="width: 50%"></span></div></td></tr>
+  
+    <tr><td><strong>9-11</strong></td><td class="num">10</td>
+      <td class="num">25,6</td><td class="num">5</td><td class="num">5</td>
+      <td class="num">3.286,00 €</td><td class="num">1.573,33 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="9-11 anni: 10 atleti"><span style="width: 100%"></span></div></td></tr>
+  
+    <tr><td><strong>12-14</strong></td><td class="num">9</td>
+      <td class="num">23,1</td><td class="num">2</td><td class="num">7</td>
+      <td class="num">2.805,00 €</td><td class="num">873,34 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="12-14 anni: 9 atleti"><span style="width: 90%"></span></div></td></tr>
+  
+    <tr><td><strong>15-17</strong></td><td class="num">10</td>
+      <td class="num">25,6</td><td class="num">0</td><td class="num">10</td>
+      <td class="num">2.995,00 €</td><td class="num">1.139,67 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="15-17 anni: 10 atleti"><span style="width: 100%"></span></div></td></tr>
+  
+    <tr><td><strong>18-29</strong></td><td class="num">4</td>
+      <td class="num">10,3</td><td class="num">2</td><td class="num">2</td>
+      <td class="num">1.213,00 €</td><td class="num">706,33 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="18-29 anni: 4 atleti"><span style="width: 40%"></span></div></td></tr>
+  
+    <tr><td><strong>30-49</strong></td><td class="num">1</td>
+      <td class="num">2,6</td><td class="num">0</td><td class="num">1</td>
+      <td class="num">340,00 €</td><td class="num">0,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="30-49 anni: 1 atleti"><span style="width: 10%"></span></div></td></tr>
+  
+    <tr class="st-zero"><td><strong>50 e oltre</strong></td><td class="num">0</td>
+      <td class="num">0,0</td><td class="num">0</td><td class="num">0</td>
+      <td class="num">0,00 €</td><td class="num">0,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="50 e oltre anni: 0 atleti"><span style="width: 0%"></span></div></td></tr>
+  
+    <tr class="tot"><td>Totale</td><td class="num">39</td><td></td><td class="num">13</td><td class="num">26</td><td class="num">12.222,00 €</td><td class="num">5.643,17 €</td><td></td></tr>
+  </tbody>
+</table></div>
+<p class="muted small">L'eta' e' quella compiuta il 01/09/2026 (primo giorno di stagione): chi compie gli anni il giorno dopo e' ancora nella fascia piu' bassa. «Meno di 3» compare solo se ci sono atleti cosi' piccoli.
+  Dovuto e incassato sono quelli delle quote confermate dell'atleta (anche con piu' corsi); N.i. = sesso non indicato.</p>
+
+
+<h2 id="pagamenti" class="st-sezione">4. Pagamenti</h2>
+
+
+<div class="st-due">
+  <div class="card">
+    <h3>Per tipologia</h3>
+    <div class="tab-wrap"><table class="tab st-tab">
+      <thead><tr><th>Metodo</th><th class="num">Pagamenti</th><th class="num">Importo</th><th class="num">%</th><th>Peso</th></tr></thead>
+      <tbody>
+      
+        <tr><td><strong>Bonifico</strong></td><td class="num">13</td><td class="num">4.781,51 €</td>
+          <td class="num">84,7</td>
+          <td class="st-peso"><div class="barra" role="img" aria-label="84,7 per cento"><span style="width: 100%"></span></div></td></tr>
+      
+        <tr><td><strong>Contanti</strong></td><td class="num">5</td><td class="num">861,66 €</td>
+          <td class="num">15,3</td>
+          <td class="st-peso"><div class="barra" role="img" aria-label="15,3 per cento"><span style="width: 18%"></span></div></td></tr>
+      
+        <tr><td><strong>Altro</strong></td><td class="num">0</td><td class="num">0,00 €</td>
+          <td class="num">0,0</td>
+          <td class="st-peso"><div class="barra" role="img" aria-label="0,0 per cento"><span style="width: 0%"></span></div></td></tr>
+      
+        <tr class="tot"><td>Totale</td><td class="num">18</td><td class="num">5.643,17 €</td><td></td><td></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="card">
+    <h3>Incassi per mese (data del pagamento)</h3>
+    
+      <div class="barra-riga"><span class="et">set 2026</span><div class="barra ok" role="img" aria-label="set 2026: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">ott 2026</span><div class="barra ok" role="img" aria-label="ott 2026: 100,00 €"><span style="width: 2%"></span></div><span class="val">100,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">nov 2026</span><div class="barra ok" role="img" aria-label="nov 2026: 5.543,17 €"><span style="width: 100%"></span></div><span class="val">5.543,17 €</span></div>
+    
+      <div class="barra-riga"><span class="et">dic 2026</span><div class="barra ok" role="img" aria-label="dic 2026: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">gen 2027</span><div class="barra ok" role="img" aria-label="gen 2027: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">feb 2027</span><div class="barra ok" role="img" aria-label="feb 2027: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">mar 2027</span><div class="barra ok" role="img" aria-label="mar 2027: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">apr 2027</span><div class="barra ok" role="img" aria-label="apr 2027: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">mag 2027</span><div class="barra ok" role="img" aria-label="mag 2027: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+      <div class="barra-riga"><span class="et">giu 2027</span><div class="barra ok" role="img" aria-label="giu 2027: 0,00 €"><span style="width: 0%"></span></div><span class="val">0,00 €</span></div>
+    
+  </div>
+</div>
+<div class="st-kpi" style="margin-top:1rem">
+  <div><div class="n">0,00 €</div><div class="t">Credito non assegnato a nessuna rata</div><div class="d">0 pagamenti con una parte non assegnata</div></div>
+  <div><div class="n">0</div><div class="t">Pagamenti annullati (esclusi dai numeri)</div><div class="d">0,00 € non contati</div></div>
+</div>
+
+<p class="muted small">Contano solo i pagamenti <strong>registrati</strong> che coprono le rate di questa stagione, per la parte assegnata alle rate; i pagamenti annullati non sono inclusi.
+  I mesi sono quelli in cui i soldi sono entrati, anche fuori dalla stagione. Il credito non assegnato riguarda i pagamenti datati dal 01/09/2026 al 30/06/2027
+  che non coprono nessuna rata (o solo in parte): soldi delle famiglie ancora da assegnare.</p>
+
+<h3 id="morosita" class="st-sezione">Morosita' (rate scadute non saldate, alla data di oggi)</h3>
+
+
+<div class="st-kpi">
+  <div><div class="n">1.314,96 €</div><div class="t">Da incassare, rate scadute</div></div>
+  <div><div class="n">11</div><div class="t">Rate scadute non saldate</div></div>
+  <div><div class="n">11</div><div class="t">Atleti con almeno una rata scaduta</div></div>
+</div>
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Ritardo al 25/11/2026</th><th class="num">Rate</th><th class="num">Atleti</th><th class="num">Importo residuo</th><th class="num">%</th><th>Peso</th></tr></thead>
+  <tbody>
+  
+    <tr><td><strong>1-30 giorni</strong></td><td class="num">2</td><td class="num">2</td><td class="num">680,00 €</td>
+      <td class="num">51,7</td>
+      <td class="st-peso"><div class="barra bad" role="img" aria-label="51,7 per cento"><span style="width: 100%"></span></div></td></tr>
+  
+    <tr><td><strong>31-60 giorni</strong></td><td class="num">9</td><td class="num">9</td><td class="num">634,96 €</td>
+      <td class="num">48,3</td>
+      <td class="st-peso"><div class="barra bad" role="img" aria-label="48,3 per cento"><span style="width: 93%"></span></div></td></tr>
+  
+    <tr><td><strong>Oltre 60 giorni</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0,00 €</td>
+      <td class="num">0,0</td>
+      <td class="st-peso"><div class="barra bad" role="img" aria-label="0,0 per cento"><span style="width: 0%"></span></div></td></tr>
+  
+  </tbody>
+</table></div>
+
+<p class="muted small">Rate delle quote confermate di questa stagione con la scadenza gia' passata e ancora da pagare (in tutto o in parte), contate sul residuo, divise per giorni di ritardo da oggi (25/11/2026).
+  Le rate non ancora scadute non sono incluse.</p>
+
+
+<h2 id="shop" class="st-sezione">5. Shop</h2>
+<div class="st-kpi">
+  <div><div class="n">111,00 €</div><div class="t">Totale ordini (2)</div></div>
+  <div><div class="n">47,00 €</div><div class="t">Pagato</div></div>
+  <div><div class="n">64,00 €</div><div class="t">Da pagare</div></div>
+</div>
+
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Categoria</th><th class="num">Ordini</th><th class="num">Pezzi</th><th class="num">Totale</th><th class="num">Pagato</th><th class="num">Da pagare</th><th>Peso</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Tute</strong></td><td class="num">1</td><td class="num">1</td><td class="num">42,00 €</td><td class="num">42,00 €</td><td class="num">0,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="Tute: 37,8 per cento"><span style="width: 100%"></span></div></td></tr>
+  
+    <tr><td><strong>Karategi</strong></td><td class="num">1</td><td class="num">1</td><td class="num">32,00 €</td><td class="num">0,00 €</td><td class="num">32,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="Karategi: 28,8 per cento"><span style="width: 76%"></span></div></td></tr>
+  
+    <tr><td><strong>Magliette</strong></td><td class="num">1</td><td class="num">2</td><td class="num">24,00 €</td><td class="num">0,00 €</td><td class="num">24,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="Magliette: 21,6 per cento"><span style="width: 57%"></span></div></td></tr>
+  
+    <tr><td><strong>Cinture</strong></td><td class="num">1</td><td class="num">1</td><td class="num">8,00 €</td><td class="num">0,00 €</td><td class="num">8,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="Cinture: 7,2 per cento"><span style="width: 19%"></span></div></td></tr>
+  
+    <tr><td><strong>Protezioni</strong></td><td class="num">1</td><td class="num">1</td><td class="num">5,00 €</td><td class="num">5,00 €</td><td class="num">0,00 €</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="Protezioni: 4,5 per cento"><span style="width: 12%"></span></div></td></tr>
+  </tbody>
+</table></div>
+
+<p class="muted small">Ordini dello shop <strong>non annullati</strong> fatti tra il 01/09/2026 e il 30/06/2027 (data dell'ordine). Lo shop e' separato dalle quote: non e' nei numeri delle sezioni precedenti.
+  Un ordine con piu' categorie compare in ognuna.</p>
+
+
+<h2 id="gare" class="st-sezione">6. Gare ed eventi</h2>
+<div class="st-kpi">
+  <div><div class="n">2</div><div class="t">Gare ed eventi (1 gara, 1 evento)</div></div>
+  <div><div class="n">5</div><div class="t">Convocazioni</div></div>
+  <div><div class="n">1</div><div class="t">Hanno detto si</div></div>
+  <div><div class="n">1</div><div class="t">Hanno detto no</div></div>
+  <div><div class="n">3</div><div class="t">Senza risposta</div></div>
+</div>
+
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Data</th><th>Gara o evento</th><th>Tipo</th><th class="num">Convocati</th><th class="num">Si</th><th class="num">No</th><th class="num">Senza risposta</th></tr></thead>
+  <tbody>
+    <tr><td class="nowrap">16/12/2026</td><td><a href="../../gare/1/index.html">Trofeo Città di Verona (DATI DI PROVA)</a></td><td>Gara</td><td class="num">3</td><td class="num">1</td><td class="num">1</td><td class="num">1</td></tr>
+  
+    <tr><td class="nowrap">09/01/2027</td><td><a href="../../gare/2/index.html">Stage con il maestro ospite (DATI DI PROVA)</a></td><td>Evento</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td></tr>
+  </tbody>
+</table></div>
+
+<p class="muted small">Gare ed eventi con la data di inizio tra il 01/09/2026 e il 30/06/2027. «Convocazioni» sono gli atleti convocati (uno per atleta e per evento); «Senza risposta» sono quelle ancora in attesa.</p>
+
+
+<h2 id="andamento" class="st-sezione">7. Andamento di tutte le stagioni</h2>
+<div class="tab-wrap"><table class="tab st-tab">
+  <thead><tr><th>Stagione</th><th class="num">Iscritti</th><th>Iscritti (barra)</th><th class="num">Nuovi</th><th class="num">Rinnovi</th><th class="num">Persi</th><th class="num">Tasso rinnovo %</th><th class="num">Dovuto</th><th class="num">Incassato</th><th>Incassato (barra)</th><th class="num">Medio per atleta</th></tr></thead>
+  <tbody>
+  
+    <tr><td><strong>2025/26</strong></td><td class="num">43</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="2025/26: 43 iscritti"><span style="width: 100%"></span></div></td>
+      <td class="num">43</td><td class="num">0</td><td class="num">0</td>
+      <td class="num">-</td>
+      <td class="num">12.347,60 €</td><td class="num">10.485,43 €</td>
+      <td class="st-peso"><div class="barra ok" role="img" aria-label="2025/26: 10.485,43 € incassati"><span style="width: 100%"></span></div></td>
+      <td class="num">301,16 €</td></tr>
+  
+    <tr class="st-sel"><td><strong>2026/27</strong></td><td class="num">39</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="2026/27: 39 iscritti"><span style="width: 91%"></span></div></td>
+      <td class="num">10</td><td class="num">29</td><td class="num">14</td>
+      <td class="num">67,4</td>
+      <td class="num">12.222,00 €</td><td class="num">5.643,17 €</td>
+      <td class="st-peso"><div class="barra ok" role="img" aria-label="2026/27: 5.643,17 € incassati"><span style="width: 54%"></span></div></td>
+      <td class="num">313,38 €</td></tr>
+  
+    <tr><td><strong>2027/28</strong></td><td class="num">10</td>
+      <td class="st-peso"><div class="barra" role="img" aria-label="2027/28: 10 iscritti"><span style="width: 23%"></span></div></td>
+      <td class="num">0</td><td class="num">10</td><td class="num">29</td>
+      <td class="num">25,6</td>
+      <td class="num">0,00 €</td><td class="num">0,00 €</td>
+      <td class="st-peso"><div class="barra ok" role="img" aria-label="2027/28: 0,00 € incassati"><span style="width: 0%"></span></div></td>
+      <td class="num">-</td></tr>
+  
+  </tbody>
+</table></div>
+<p class="muted small">Una riga per stagione, con le stesse regole delle sezioni sopra (la riga evidenziata e' la stagione scelta). I «persi» di una stagione ancora in corso sono in realta' «non ancora rinnovati».
+  Dovuto e incassato sono per competenza (quote confermate della stagione); il medio e' dovuto / atleti con quota confermata.</p>
+
+
+
+
+  </main>
+</div>
+
+<nav class="bottom" aria-label="Menu">
+  <a href="../../index.html" class=""><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/></svg><span>Dashboard</span></a><a href="../../segreteria/iscrizioni/index.html" class=""><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="4.5" width="12" height="16.5" rx="2"/><path d="M9.5 4.5V3.5h5v1"/><path d="M9.5 11h5M9.5 15h3.5"/></svg><span>Iscrizioni</span></a>
+  <button type="button" class="fab" data-foglio-apri aria-label="Azioni rapide" aria-haspopup="dialog"><svg class="ico " width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></button>
+  
+    <a href="../../tesserati/index.html" class=""><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3.2 2.4-5.2 5.5-5.2s5.5 2 5.5 5.2"/><circle cx="17" cy="9" r="2.4"/><path d="M16.3 14c2.6 0 4.7 1.6 4.7 4.5"/></svg><span>Tesserati</span></a>
+    <details class="altro">
+      <summary><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/></svg><span>Altro</span></summary>
+      <div class="pannello-altro"><a href="../../quote/index.html" class=""><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 7.3A6.2 6.2 0 1 0 17.5 16.7"/><path d="M5 10.4h8.2M5 13.6h8.2"/></svg> Quote e pagamenti</a><a href="../../documenti/index.html" class=""><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 12h5M9.5 15.5h5"/></svg> Documenti</a><a href="../../segreteria/shop/index.html" class=""><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8.5h14l-1 11.5H6z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg> Shop</a><a href="../../gare/index.html" class=""><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21V4"/><path d="M6 5h11.5l-2.3 4 2.3 4H6"/></svg> Gare ed eventi</a><a href="../../messaggi/index.html" class=""><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9.5L4 20.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg> Comunicazioni</a><a href="../index.html" class="attivo"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.5 12a7.5 7.5 0 1 1-2.4-5.5"/><path d="M19.5 4.5v4h-4"/><path d="M12 8v4.2l2.6 1.6"/></svg> Stagione</a><a href="../../configurazione/index.html" class=""><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></svg> Configurazione</a></div>
+    </details>
+  
+</nav>
+
+
+<div id="foglio" class="foglio" hidden>
+  <div class="foglio-sfondo" data-foglio-chiudi></div>
+  <div class="foglio-corpo" role="dialog" aria-modal="true" aria-label="Azioni rapide">
+    <div class="foglio-maniglia" aria-hidden="true"></div>
+    <h2>Cosa vuoi fare?</h2>
+    <div class="azioni-griglia">
+      <a class="azione" href="../../pagamenti/nuovo/index.html"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 7.3A6.2 6.2 0 1 0 17.5 16.7"/><path d="M5 10.4h8.2M5 13.6h8.2"/></svg><span>Registra un pagamento</span></a><a class="azione" href="../../messaggi/nuovo/index.html"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9.5L4 20.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Scrivi a una famiglia</span></a><a class="azione" href="../../messaggi/avviso/index.html"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10v4h3l7 4V6L7 10z"/><path d="M17.5 9.5a4 4 0 0 1 0 5"/></svg><span>Avviso collettivo</span></a><a class="azione" href="../../gare/nuova/index.html"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 21V4"/><path d="M6 5h11.5l-2.3 4 2.3 4H6"/></svg><span>Nuova gara o evento</span></a><a class="azione" href="../../segreteria/iscrizioni/index.html"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="4.5" width="12" height="16.5" rx="2"/><path d="M9.5 4.5V3.5h5v1"/><path d="M9.5 11h5M9.5 15h3.5"/></svg><span>Iscrizioni da approvare</span></a><a class="azione" href="../../tesserati/index.html"><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3.2 2.4-5.2 5.5-5.2s5.5 2 5.5 5.2"/><circle cx="17" cy="9" r="2.4"/><path d="M16.3 14c2.6 0 4.7 1.6 4.7 4.5"/></svg><span>Tesserati</span></a>
+    </div>
+  </div>
+</div>
+
+
+<div id="toast" class="toast-box" aria-live="polite" aria-atomic="false"></div>
+
+</body>
+</html>

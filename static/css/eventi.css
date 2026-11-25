@@ -1,0 +1,21 @@
+/* Gare ed eventi: aggiunte allo stile comune (app.css). Mobile prima di tutto. */
+.testo-copia { width: 100%; min-height: 150px; font: .9rem/1.45 ui-monospace, Consolas, monospace; background: var(--soft); }
+.scheda-evento dl.dati { margin-top: .4rem; }
+.scheda-evento dd { white-space: normal; }
+.riga-figlio { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between; padding: .6rem 0; border-top: 1px solid var(--line); }
+.riga-figlio:first-of-type { border-top: 0; }
+.riga-figlio .risposte { display: flex; flex-wrap: wrap; gap: .5rem; }
+.riga-figlio .risposte form { margin: 0; }
+@media (max-width: 480px) { .riga-figlio .risposte, .riga-figlio .risposte form, .riga-figlio .risposte .btn { width: 100%; } }
+.sel-lista td.sel, .sel-lista th.sel { width: 44px; text-align: center; }
+.sel-lista input[type=checkbox], .recapito input[type=checkbox] { width: 22px; height: 22px; min-height: 0; accent-color: var(--accent); flex: none; }
+.recapito { display: flex; gap: .5rem; align-items: flex-start; padding: .15rem 0; }
+.recapito label { font-weight: 500; }
+.recapito.spento { color: var(--muted); }
+.barra-azioni { position: sticky; bottom: 64px; z-index: 5; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; padding: .7rem 1rem; margin-top: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+@media (min-width: 900px) { .barra-azioni { bottom: 0; } }
+.azioni-riga { display: flex; flex-wrap: wrap; gap: .3rem; align-items: center; }
+.azioni-riga form { margin: 0; display: inline-flex; gap: .25rem; }
+.passi { counter-reset: passo; list-style: none; margin: .4rem 0 0; padding: 0; }
+.passi li { counter-increment: passo; position: relative; padding: .25rem 0 .25rem 2.2rem; }
+.passi li::before { content: counter(passo); position: absolute; left: 0; top: .2rem; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: .85rem; font-weight: 700; }

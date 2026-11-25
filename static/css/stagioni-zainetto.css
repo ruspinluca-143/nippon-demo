@@ -1,0 +1,7 @@
+/* Zainetto fiscale: piccoli ritocchi alla tabella degli archivi. Nessun JavaScript. */
+.zainetto-def ul { margin: .4rem 0 .4rem 1.1rem; padding: 0; }
+.zainetto-def li { margin: .25rem 0; }
+form.in-riga { display: inline-block; margin: 0 0 0 .35rem; }
+.zainetto-hash { margin-top: .4rem; }
+.zainetto-hash code { display: block; overflow-wrap: anywhere; max-width: 22rem; }
+@media (max-width: 560px) { form.in-riga { margin: .35rem 0 0; } }

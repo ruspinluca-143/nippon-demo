@@ -1,0 +1,18 @@
+/* Sezione "Stagione": barre di avanzamento, riquadri di riepilogo. Nessun JavaScript: le larghezze arrivano dal server. */
+.barra { height: 12px; border-radius: 999px; background: var(--grey-bg); overflow: hidden; }
+.barra > span { display: block; height: 100%; border-radius: 999px; background: var(--accent); }
+.barra.ok > span { background: var(--ok); }
+.barra.warn > span { background: var(--warn); }
+.barra.bad > span { background: var(--bad); }
+.barra-riga { display: grid; grid-template-columns: minmax(120px, 28%) 1fr auto; gap: .6rem; align-items: center; padding: .25rem 0; }
+.barra-riga .et { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barra-riga .val { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 560px) { .barra-riga { grid-template-columns: 1fr auto; } .barra-riga .barra { grid-column: 1 / -1; order: 3; } }
+.st-kpi { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 1rem; }
+.st-kpi > div { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem; }
+.st-kpi .n { font-size: 1.7rem; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.st-kpi .t { color: var(--muted); font-size: .88rem; }
+.st-kpi .d { font-size: .82rem; margin-top: .15rem; }
+.st-kpi .d.su { color: var(--ok); }
+.st-kpi .d.giu { color: var(--bad); }
+.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
